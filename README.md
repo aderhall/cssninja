@@ -28,7 +28,7 @@ Build a structure for your page made of nested divs:
   </div>
 </body>
 ```
-
+![Image: result of above html](Screen%20Shot%202018-08-29%20at%205.31.00%20PM.png)
 There are two main classes: 'box' and 'pane'. A box is a container for one or more panes. It can be vertical or horizontal. A pane is a container for an element (which can be a box) that sits inside a box.
 
 ### Rules:
