@@ -5,7 +5,7 @@ CSS and javascript files for easy nested positioning
 Link the stylesheet and script.
 ```html
 <link rel="stylesheet" href="partition.css" type="text/css" />
-<script src="partition.js" type="text/javascript" />
+<script src="partition.js" type="text/javascript"></script>
 ```
 Build a structure for your page made of nested divs:
 
