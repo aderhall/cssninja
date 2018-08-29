@@ -7,7 +7,27 @@ Link the stylesheet and script.
 <link rel="stylesheet" href="partition.css" type="text/css" />
 <script src="partition.js" type="text/javascript" />
 ```
-Build a structure for your page made of nested divs.
+Build a structure for your page made of nested divs:
+
+```html
+<body>
+  <div class="vertical box">
+    <div class="pane" style="height: 25%; background: #0F0;">
+      This takes up 25% of the body!
+    </div>
+    <div class="pane" style="height: 75%;">
+      <div class="horizontal box">
+        <div class="pane" style="width: 20%;  background: #F00;">
+          This takes up 15% of the body!
+        </div>
+        <div class="pane" style="width: 80%%;  background: #00F;">
+          This takes up 60% of the body!
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+```
 
 There are two main classes: 'box' and 'pane'. A box is a container for one or more panes. It can be vertical or horizontal. A pane is a container for an element (which can be a box) that sits inside a box.
 
