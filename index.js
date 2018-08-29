@@ -1,15 +1,12 @@
+// Get all elements with class expand and set their dimensions to fill their parent
 expanders = document.getElementsByClassName('expand');
-
 for (var el = 0; el < expanders.length; el ++) {
   // Get the element to expand
   var element = expanders[el];
-  console.log(element);
   // Get the parent element
   var parent = element.parentNode;
-  console.log(parent);
   // Get the sibling elements
   var siblings = parent.childNodes;
-  console.log(siblings);
 
   // Test if parent is vertical. If not, assume horizontal.
   if (parent.className.split(' ').indexOf('vertical') > -1) {
@@ -22,10 +19,8 @@ for (var el = 0; el < expanders.length; el ++) {
     var an = 'width'
   }
 
-  console.log(target);
   // Add up all of the sibling dimensions
   var total = 0;
-  console.log(siblings.length);
   for (var s = 0; s < siblings.length; s ++) {
     var sibling = siblings[s];
     if (sibling.nodeName !== '#text') {
@@ -37,7 +32,6 @@ for (var el = 0; el < expanders.length; el ++) {
     }
   }
   var remainder = (target-total).toString() + 'px'
-  console.log(remainder);
   // If vertical, add the size gap to the child's height. If horizontal, its width.
   if (v) {
     element.style.height = remainder;

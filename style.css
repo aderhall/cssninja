@@ -1,6 +1,6 @@
 @font-face {
 font-family: Typewriter;
-src: 'https://aderhall.github.io/downloads/at.ttf';
+src: url(https://aderhall.github.io/downloads/at.ttf);
 }
 
 html, body {
@@ -11,9 +11,10 @@ html, body {
   margin: 0;
   line-height: 1.6;
   color: #444;
-  font-family: Typewriter;
 }
-
+* {
+    font-family: Typewriter;
+}
 a {
     text-decoration: none;
     color: #00B;
