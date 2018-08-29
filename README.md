@@ -23,15 +23,15 @@ There are two main classes: 'box' and 'pane'. A box is a container for one or mo
 
 ### Classes:
 #### Managed by CSS:
-Name:      | Description:
--------------------------
-box        | A box. Apply to div, must contain one or more panes.
-pane       | The only element that can be placed inside a box. Can contain a box or any other html.
-ghost      | Invisible. Apply this to a pane to make it transparent to clicks and background elements. Will still take up space.
-vertical   | Apply to a box. Makes contained panes arrange themselves vertically.
-horizontal | Apply to a box. Makes contained panes arrange themselves horizontally.
+|Name:      | Description:|
+|-----------|-------------|
+|box        |A box. Apply to div, must contain one or more panes.  |
+|pane       |The only element that can be placed inside a box. Can contain a box or any other html.  |
+|ghost      |Invisible. Apply this to a pane to make it transparent to clicks and background elements. Will still take up space.  |
+|vertical   |Apply to a box. Makes contained panes arrange themselves vertically.  |
+|horizontal |Apply to a box. Makes contained panes arrange themselves horizontally.  |
 
 #### Managed by javascript:
-Name:      | Description:
--------------------------
-expand     | Apply to a pane. Automatically sets width or height to fill remaining space not taken up by other divs in parent box.
+|Name:      | Description:|
+|-----------|-------------|
+|expand     | Apply to a pane. Automatically sets width or height to fill remaining space not taken up by other divs in parent box.  |
