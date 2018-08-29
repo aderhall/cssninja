@@ -4,7 +4,7 @@ A css file for easy nested positioning
 ## How to use:
 Link the stylesheet.
 ```html
-<link rel="stylesheet" href="partition.css">
+<link rel="stylesheet" href="partition.css" type="text/css">
 ```
 Build a structure for your page made of nested divs. Two main classes: 'box' and 'pane'. A box is a container for one or more panes. It can be vertical or horizontal. A pane is a container for an element (which can be a box) that sits inside a box.
 
