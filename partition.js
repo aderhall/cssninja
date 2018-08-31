@@ -1,42 +1,42 @@
-// Get all elements with class expand and set their dimensions to fill their parent
-expanders = document.getElementsByClassName('expand');
-for (var el = 0; el < expanders.length; el ++) {
-  // Get the element to expand
-  var element = expanders[el];
-  // Get the parent element
-  var parent = element.parentNode;
-  // Get the sibling elements
-  var siblings = parent.childNodes;
+function expand() {
+  // Get all elements with class expand and set their dimensions to fill their parent
+  expanders = document.getElementsByClassName('expand');
+  for (var el = 0; el < expanders.length; el ++) {
+    // Get the element to expand
+    var element = expanders[el];
+    // Get the parent element
+    var parent = element.parentNode;
+    // Get the sibling elements
+    var siblings = parent.childNodes;
 
-  // Test if parent is vertical. If not, assume horizontal.
-  if (parent.className.split(' ').indexOf('vertical') > -1) {
-    var target = parent.offsetHeight;
-    var v = true;
-    var an = 'height';
-  } else {
-    var target = parent.offsetWidth;
-    var v = false;
-    var an = 'width'
-  }
+    // Test if parent is vertical. If not, assume horizontal.
+    if (parent.className.split(' ').indexOf('vertical') > -1) {
+      var target = parent.offsetHeight;
+      var v = true;
+      var an = 'height';
+    } else {
+      var target = parent.offsetWidth;
+      var v = false;
+      var an = 'width'
+    }
 
-  // Add up all of the sibling dimensions
-  var total = 0;
-  for (var s = 0; s < siblings.length; s ++) {
-    var sibling = siblings[s];
-    if (sibling.nodeName !== '#text') {
-      if (sibling.className.split(' ').indexOf('expand') == -1) {
-        console.log(sibling);
-        total += px(sibling, an);
-        console.log(total);
+    // Add up all of the sibling dimensions
+    var total = 0;
+    for (var s = 0; s < siblings.length; s ++) {
+      var sibling = siblings[s];
+      if (sibling.nodeName !== '#text') {
+        if (sibling.className.split(' ').indexOf('expand') == -1) {
+          total += px(sibling, an);
+        }
       }
     }
-  }
-  var remainder = (target-total).toString() + 'px'
-  // If vertical, add the size gap to the child's height. If horizontal, its width.
-  if (v) {
-    element.style.height = remainder;
-  } else {
-    element.style.height = remainder;
+    var remainder = (target-total).toString() + 'px'
+    // If vertical, add the size gap to the child's height. If horizontal, its width.
+    if (v) {
+      element.style.height = remainder;
+    } else {
+      element.style.height = remainder;
+    }
   }
 }
 
@@ -73,3 +73,5 @@ function getStyle(el, styleProp) {
     return value;
   }
 }
+
+expand();
