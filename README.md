@@ -7,10 +7,10 @@ Link the stylesheet and script.
 <link rel="stylesheet" href="partition.css" type="text/css" />
 <script src="partition.js" type="text/javascript"></script>
 ```
-Build a structure for your page made of nested divs:
+Build a structure for your page made of nested divs (add onresize="expand();" to the body tag if you're using the expand class, to automatically recalculate sizes if the window size changes)
 
 ```html
-<body>
+<body onresize="expand();">
   <div class="vertical box">
     <div class="pane" style="height: 25%; background: #0F0;">
       This takes up 25% of the body!
